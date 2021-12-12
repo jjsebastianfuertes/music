@@ -1,62 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
+st<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/padding_md">
 
-    <ImageView
-        android:id="@+id/login_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/purple_500"
-        android:src="@drawable/ic_launcher_foreground"
-        app:layout_constraintBottom_toTopOf="@+id/login_username"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8"
-        android:contentDescription="TODO" />
 
+    <include
+        layout="@layout/merge_logo"
+        app:layout_constraintBottom_toTopOf="@+id/login_username"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_username"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:circularflow_viewCenter="pare"
+        app:layout_constraintStart_toStartOf="parent"
+        ></include>
     <EditText
+        style="@style/TextInput.UserName"
         android:id="@+id/login_username"
+        android:layout_below="@+id/login_logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_logo"
-        android:drawableStart="@drawable/ic_person"
-        android:drawablePadding="@dimen/padding_xsm"
         android:hint="@string/user"
-        android:padding="@dimen/padding_sm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        android:inputType="text" />
+      />
 
     <EditText
+        style="@style/TextInput.Password"
         android:id="@+id/login_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_username"
-        android:layout_marginTop="4dp"
-        android:drawableStart="@drawable/ic_lock"
-        android:drawablePadding="@dimen/padding_xsm"
         android:hint="@string/password"
-        android:padding="@dimen/padding_sm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_username"
-        android:inputType="textPassword"/>
+        app:layout_constraintTop_toBottomOf="@+id/login_username" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:padding="@dimen/padding_sm"
+        style="@style/Button"
         android:text="@string/btn_login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/accent</item>
+    </style>
+
+    <style name="TextInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@+id/login_username</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:padding">@dimen/padding_sm</item>
+        <item name="android:drawablePadding">@dimen/padding_xsm</item>
+    </style>
+
+    <style name="TextInput.UserName" parent="TextInput">
+        <item name="android:drawableStart">@drawable/ic_person</item>
+        <item name="android:inputType">text</item>
+    </style>
+    <style name="TextInput.Password" parent="TextInput">
+        <item name="android:drawableStart">@drawable/ic_lock</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/padding_sm</item>
+    </style>
+</resources>
